@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Extracted Data</h1>
+    <h2>Jobs</h2>
+    <ul>
+        {% for job_id, job_details in data['Jobs'].items() %}
+            <li>{{ job_id }}: {{ job_details }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Machines</h2>
+    <ul>
+        {% for machine_id, machine_details in data['Machines'].items() %}
+            <li>{{ machine_id }}: {{ machine_details }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Repeat similar blocks for other variables -->
+</body>
+</html>
